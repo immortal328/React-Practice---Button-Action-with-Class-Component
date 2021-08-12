@@ -11,7 +11,10 @@ class App extends Component {
     render() {
     	return(
     		<div id="main">
-			<button id="click"onClick={()=>{this.setState({ text:!text });}}></button>
+			<button id="click"
+			onClick={function(){
+				this.state ={text:!text}
+			}}></button>
 			{this.state.text? (<h1 id="para">{this.txt}</h1>):null}
     		</div>
     	);
